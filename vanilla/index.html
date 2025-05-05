@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monaco Editor Example</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="file-selector">
+    <select id="file-select">
+      <!-- 文件选项将通过JavaScript动态添加 -->
+    </select>
+  </div>
+  <div class="editor-container">
+    <div id="editor"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script>
+  <script src="js/sampleFiles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
