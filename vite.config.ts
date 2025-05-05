@@ -13,17 +13,19 @@ export default defineConfig({
     'global': 'window',
   },
   build: {
+    cssCodeSplit: false, // CSS 不分离
     rollupOptions: {
       output: {
-        manualChunks: {
-          'monaco-chunks': [
-            'monaco-editor/esm/vs/language/json/json.worker',
-            'monaco-editor/esm/vs/language/css/css.worker',
-            'monaco-editor/esm/vs/language/html/html.worker',
-            'monaco-editor/esm/vs/language/typescript/ts.worker',
-            'monaco-editor/esm/vs/editor/editor.worker'
-          ],
-        },
+        inlineDynamicImports: true, // 把所有动态导入的模块合并到一个文件
+        // manualChunks: {
+        //   'monaco-chunks': [
+        //     'monaco-editor/esm/vs/language/json/json.worker',
+        //     'monaco-editor/esm/vs/language/css/css.worker',
+        //     'monaco-editor/esm/vs/language/html/html.worker',
+        //     'monaco-editor/esm/vs/language/typescript/ts.worker',
+        //     'monaco-editor/esm/vs/editor/editor.worker'
+        //   ],
+        // },
       },
     },
   },
